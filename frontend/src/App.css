@@ -1,0 +1,83 @@
+.leaflet-container{
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+
+h1
+{
+  text-align: center;
+}
+
+
+.side-panel-container
+{
+    height: 100%;
+    width: 300px;
+    z-index: 1001;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    padding: 25px 5px;
+}
+
+
+.map-panel-container
+{
+    height: 210px;
+    width: 100px;
+    position: absolute;
+    z-index: 1001;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    overflow-x: hidden;
+    
+
+    padding: 25px 5px;
+}
+
+
+
+div.journey-page-container
+{
+    height: calc(100vh - 80px);
+
+    position: relative;
+}
+
+
+
+.side-panel-toggle
+{
+    position: relative;
+    float: left;
+    z-index: 1002;
+    margin-left: 310px;
+    margin-top: 300px;
+    border: solid black;
+    background-color: #06884A;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.grey-background
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

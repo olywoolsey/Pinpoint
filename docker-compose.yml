@@ -1,0 +1,43 @@
+services: 
+  frontend: 
+    build: ./frontend 
+
+    volumes: 
+      - ./frontend:/app 
+      # Mount the entire frontend directory into /app inside the container to allow live code reloading.
+
+      - /app/node_modules 
+      # Create an anonymous volume for node_modules. This prevents the local node_modules from being overwritten due to the volume mount.
+
+    ports: 
+      - "3000:3000" 
+      # Expose port 3000 on the container and map it to port 3000 on the host to access the React app.
+
+    environment: 
+      - NODE_ENV=development
+      # Sets the environment to development for React scripts
+      - CHOKIDAR_USEPOLLING=true 
+      # Use polling for file change detection inside the Docker volume, necessary for some environments where event-based change detection doesn't work well.
+
+    stdin_open: true 
+    tty: true 
+    # Keep the container running with an interactive shell to enable hot reloading.
+
+  backend: 
+    build: ./backend 
+
+    volumes: 
+      - ./backend:/app 
+      # Mount the entire backend directory into /app inside the container for live code updates.
+
+    ports: 
+      - "5000:5000" 
+      # Expose port 5000 on the container and map it to port 5000 on the host for accessing the Flask app.
+
+    environment: 
+      - FLASK_ENV=development 
+      # Run Flask in development mode, enabling debug mode and automatic reloading on code changes.
+
+volumes: 
+  node_modules: 
+  # Declares a named volume for node_modules, used by the frontend service to persist dependencies across container rebuilds.

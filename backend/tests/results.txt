@@ -1,0 +1,52 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.1.1, pluggy-1.4.0 -- /home/oly/team-project-team-7/backend/_venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/oly/team-project-team-7/backend
+configfile: pytest.dev.ini
+testpaths: tests
+collecting ... collected 42 items
+
+tests/test_actions.py::test_manager_protected[/projections] PASSED       [  2%]
+tests/test_actions.py::test_manager_protected[/users_data] PASSED        [  4%]
+tests/test_actions.py::test_login_route[testing@testing.com-testing123-200] PASSED [  7%]
+tests/test_actions.py::test_login_route[nonexistent@example.com-password-401] PASSED [  9%]
+tests/test_actions.py::test_login_route[testing@testing.com-wrongpassword-401] PASSED [ 11%]
+tests/test_actions.py::test_login_route[c4@customer.com-cust-401] PASSED [ 14%]
+tests/test_actions.py::test_register_route[user112334-new@example.com-password123-201-Registration successful] PASSED [ 16%]
+tests/test_actions.py::test_register_route[n-n@example.com-password123-400-Username must be at least 4 characters long.] PASSED [ 19%]
+tests/test_actions.py::test_register_route[newuser-new@example.com-short-400-Password must be at least 8 characters long.] PASSED [ 21%]
+tests/test_actions.py::test_register_route[validname-testing@testing.com-password123-400-Account with that email already exists.] PASSED [ 23%]
+tests/test_actions.py::test_register_route[testing-c@customer.com-customer123-400-Username taken, please choose another.] PASSED [ 26%]
+tests/test_actions.py::test_logout_route PASSED                          [ 28%]
+tests/test_actions.py::test_delete_account PASSED                        [ 30%]
+tests/test_actions.py::test_change_username[testing] PASSED              [ 33%]
+tests/test_actions.py::test_change_username[new_test_user] PASSED        [ 35%]
+tests/test_actions.py::test_change_username[user2] PASSED                [ 38%]
+tests/test_actions.py::test_change_password[testing123-newPass123!-True] PASSED [ 40%]
+tests/test_actions.py::test_change_password[wrongCurPwd-newPass123!-False] PASSED [ 42%]
+tests/test_actions.py::test_change_password[testing123-testing123-False] PASSED [ 45%]
+tests/test_actions.py::test_change_password[testing123-1-False] PASSED   [ 47%]
+tests/test_actions.py::test_upload_route[Route1.gpx-Test Route 1-200-File uploaded successfully] PASSED [ 50%]
+tests/test_actions.py::test_upload_route[map.png-BadRoute-400-File is not in GPX format] PASSED [ 52%]
+tests/test_actions.py::test_upload_route[--400-No file selected] PASSED  [ 54%]
+tests/test_actions.py::test_deleting_route PASSED                        [ 57%]
+tests/test_actions.py::test_download_existing_route PASSED               [ 59%]
+tests/test_actions.py::test_manager_access PASSED                        [ 61%]
+tests/test_crud.py::test_retrieval_valid_customer PASSED                 [ 64%]
+tests/test_crud.py::test_retrieval_invalid_customer PASSED               [ 66%]
+tests/test_crud.py::test_update_customer PASSED                          [ 69%]
+tests/test_crud.py::test_delete_customer PASSED                          [ 71%]
+tests/test_crud.py::test_new_valid_plan PASSED                           [ 73%]
+tests/test_crud.py::test_new_invalid_plan PASSED                         [ 76%]
+tests/test_crud.py::test_update_plan_price PASSED                        [ 78%]
+tests/test_crud.py::test_delete_plan PASSED                              [ 80%]
+tests/test_crud.py::test_new_valid_route PASSED                          [ 83%]
+tests/test_crud.py::test_new_invalid_route PASSED                        [ 85%]
+tests/test_crud.py::test_update_route PASSED                             [ 88%]
+tests/test_crud.py::test_delete_route PASSED                             [ 90%]
+tests/test_crud.py::test_new_valid_friendship PASSED                     [ 92%]
+tests/test_crud.py::test_new_invalid_friendship PASSED                   [ 95%]
+tests/test_crud.py::test_update_friendship PASSED                        [ 97%]
+tests/test_crud.py::test_delete_friendship PASSED                        [100%]
+
+============================= 42 passed in 42.24s ==============================

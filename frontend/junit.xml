@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<testsuites name="jest tests" tests="52" failures="0" errors="0" time="3.648">
+  <testsuite name="Navbar" errors="0" failures="0" skipped="0" timestamp="2024-05-07T13:26:13" time="1.571" tests="12">
+    <testcase classname="Navbar Logged out Navbar display" name="Navbar Logged out Navbar display" time="0.065">
+    </testcase>
+    <testcase classname="Navbar Logged in customer Navbar display" name="Navbar Logged in customer Navbar display" time="0.032">
+    </testcase>
+    <testcase classname="Navbar Logged in manager Navbar display" name="Navbar Logged in manager Navbar display" time="0.022">
+    </testcase>
+    <testcase classname="Navbar Login button works as intended" name="Navbar Login button works as intended" time="0.074">
+    </testcase>
+    <testcase classname="Navbar Register button works as intended" name="Navbar Register button works as intended" time="0.037">
+    </testcase>
+    <testcase classname="Navbar Home button works as intended" name="Navbar Home button works as intended" time="0.017">
+    </testcase>
+    <testcase classname="Navbar Logged in manager Navbar display" name="Navbar Logged in manager Navbar display" time="0.026">
+    </testcase>
+    <testcase classname="Navbar Revenue button works as intended" name="Navbar Revenue button works as intended" time="0.025">
+    </testcase>
+    <testcase classname="Navbar Journeys button works as intended" name="Navbar Journeys button works as intended" time="0.022">
+    </testcase>
+    <testcase classname="Navbar Account button works as intended" name="Navbar Account button works as intended" time="0.02">
+    </testcase>
+    <testcase classname="Navbar Friends button works as intended" name="Navbar Friends button works as intended" time="0.023">
+    </testcase>
+    <testcase classname="Navbar Logout button works as intended" name="Navbar Logout button works as intended" time="0.025">
+    </testcase>
+  </testsuite>
+  <testsuite name="Friends" errors="0" failures="0" skipped="0" timestamp="2024-05-07T13:26:13" time="1.791" tests="6">
+    <testcase classname="Friends Friends page renders with all intended values" name="Friends Friends page renders with all intended values" time="0.082">
+    </testcase>
+    <testcase classname="Friends Remove a current friend works as intended" name="Friends Remove a current friend works as intended" time="0.251">
+    </testcase>
+    <testcase classname="Friends Send a friend request works as intended" name="Friends Send a friend request works as intended" time="0.137">
+    </testcase>
+    <testcase classname="Friends Cancelling outgoing friend request works as intended" name="Friends Cancelling outgoing friend request works as intended" time="0.049">
+    </testcase>
+    <testcase classname="Friends Accepting incoming friend request works as intended" name="Friends Accepting incoming friend request works as intended" time="0.043">
+    </testcase>
+    <testcase classname="Friends Rejecting incoming friend request works as intended" name="Friends Rejecting incoming friend request works as intended" time="0.039">
+    </testcase>
+  </testsuite>
+  <testsuite name="Login" errors="0" failures="0" skipped="0" timestamp="2024-05-07T13:26:13" time="2.025" tests="6">
+    <testcase classname="Login Login Form Displays Correctly" name="Login Login Form Displays Correctly" time="0.132">
+    </testcase>
+    <testcase classname="Login Redirect to Signup Form Works" name="Login Redirect to Signup Form Works" time="0.02">
+    </testcase>
+    <testcase classname="Login Submits correct form information via axios to backend" name="Login Submits correct form information via axios to backend" time="0.163">
+    </testcase>
+    <testcase classname="Login Logging in as a paid customer account takes you to the journeys page" name="Login Logging in as a paid customer account takes you to the journeys page" time="0.123">
+    </testcase>
+    <testcase classname="Login Logging in as a manager account takes you to the user details page" name="Login Logging in as a manager account takes you to the user details page" time="0.15">
+    </testcase>
+    <testcase classname="Login Logging in as a user with no subscription takes you to new-sub" name="Login Logging in as a user with no subscription takes you to new-sub" time="0.113">
+    </testcase>
+  </testsuite>
+  <testsuite name="Account" errors="0" failures="0" skipped="0" timestamp="2024-05-07T13:26:13" time="2.306" tests="7">
+    <testcase classname="Account Check the page renders correctly, with all key components" name="Account Check the page renders correctly, with all key components" time="0.222">
+    </testcase>
+    <testcase classname="Account Change username form causes an axios request, with intended data" name="Account Change username form causes an axios request, with intended data" time="0.176">
+    </testcase>
+    <testcase classname="Account Change password form causes an axios request, with intended data" name="Account Change password form causes an axios request, with intended data" time="0.207">
+    </testcase>
+    <testcase classname="Account Clicking the change subscription button redirects as intended" name="Account Clicking the change subscription button redirects as intended" time="0.048">
+    </testcase>
+    <testcase classname="Account Clicking cancel subscription works as intended, by sending an axios request" name="Account Clicking cancel subscription works as intended, by sending an axios request" time="0.101">
+    </testcase>
+    <testcase classname="Account Clicking delete account works as intended, by sending an axios request" name="Account Clicking delete account works as intended, by sending an axios request" time="0.075">
+    </testcase>
+    <testcase classname="Account Check the buy subscription button works" name="Account Check the buy subscription button works" time="0.052">
+    </testcase>
+  </testsuite>
+  <testsuite name="Register" errors="0" failures="0" skipped="0" timestamp="2024-05-07T13:26:13" time="2.47" tests="5">
+    <testcase classname="Register Login Form Displays Correctly" name="Register Login Form Displays Correctly" time="0.597">
+    </testcase>
+    <testcase classname="Register Register form works as intended" name="Register Register form works as intended" time="0.255">
+    </testcase>
+    <testcase classname="Register Register redirects to journeys if already have a token, with subscription" name="Register Register redirects to journeys if already have a token, with subscription" time="0.014">
+    </testcase>
+    <testcase classname="Register Register redirects to new-subscription if already have a token, without subscription" name="Register Register redirects to new-subscription if already have a token, without subscription" time="0.012">
+    </testcase>
+    <testcase classname="Register Register form does not redirect when the account already exists" name="Register Register form does not redirect when the account already exists" time="0.18">
+    </testcase>
+  </testsuite>
+  <testsuite name="Journeys" errors="0" failures="0" skipped="0" timestamp="2024-05-07T13:26:13" time="2.513" tests="9">
+    <testcase classname="Journeys Journeys page loads correctly" name="Journeys Journeys page loads correctly" time="0.355">
+    </testcase>
+    <testcase classname="Journeys Clicking upload brings up the upload popup and clicking close closes it" name="Journeys Clicking upload brings up the upload popup and clicking close closes it" time="0.088">
+    </testcase>
+    <testcase classname="Journeys Toggling the sidebar works" name="Journeys Toggling the sidebar works" time="0.073">
+    </testcase>
+    <testcase classname="Journeys Clicking on the map sidebar changes the map style" name="Journeys Clicking on the map sidebar changes the map style" time="0.064">
+    </testcase>
+    <testcase classname="Journeys Get calls are made at runtime for friends and routes" name="Journeys Get calls are made at runtime for friends and routes" time="0.022">
+    </testcase>
+    <testcase classname="Journeys Displaying maps from the sidebar works" name="Journeys Displaying maps from the sidebar works" time="0.09">
+    </testcase>
+    <testcase classname="Journeys Deleting route sends the correct axios request" name="Journeys Deleting route sends the correct axios request" time="0.197">
+    </testcase>
+    <testcase classname="Journeys Downloading route sends the correct axios request" name="Journeys Downloading route sends the correct axios request" time="0.086">
+    </testcase>
+    <testcase classname="Journeys Check uploading a route sends the correct information to the backend" name="Journeys Check uploading a route sends the correct information to the backend" time="0.084">
+    </testcase>
+  </testsuite>
+  <testsuite name="Payments" errors="0" failures="0" skipped="0" timestamp="2024-05-07T13:26:15" time="0.737" tests="4">
+    <testcase classname="Payments Payments page displays correctly" name="Payments Payments page displays correctly" time="0.049">
+    </testcase>
+    <testcase classname="Payments Subscribing weekly successful" name="Payments Subscribing weekly successful" time="0.123">
+    </testcase>
+    <testcase classname="Payments Subscribing monthly successful" name="Payments Subscribing monthly successful" time="0.017">
+    </testcase>
+    <testcase classname="Payments Subscribing yearly successful" name="Payments Subscribing yearly successful" time="0.013">
+    </testcase>
+  </testsuite>
+  <testsuite name="Home" errors="0" failures="0" skipped="0" timestamp="2024-05-07T13:26:15" time="1.134" tests="3">
+    <testcase classname="Home Home page components load correctly" name="Home Home page components load correctly" time="0.499">
+    </testcase>
+    <testcase classname="Home Sign up button works correctly" name="Home Sign up button works correctly" time="0.045">
+    </testcase>
+    <testcase classname="Home Home page components load correctly" name="Home Home page components load correctly" time="0.031">
+    </testcase>
+  </testsuite>
+=======
+<testsuites name="jest tests" tests="0" failures="0" errors="0" time="0.004">
+>>>>>>> FinalCodeCleanup
+</testsuites>

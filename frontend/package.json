@@ -1,0 +1,73 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "proxy": "http://127.0.0.1:5000",
+  "private": true,
+  "dependencies": {
+    "@jest/globals": "^29.7.0",
+    "@stripe/react-stripe-js": "^2.7.0",
+    "@stripe/stripe-js": "^3.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.7",
+    "bootstrap": "^5.3.3",
+    "chart": "^0.1.2",
+    "chart.js": "^4.4.2",
+    "history": "^5.3.0",
+    "leaflet": "^1.9.4",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
+    "react-router": "^6.22.3",
+    "react-router-dom": "^6.22.3",
+    "react-scripts": "^5.0.1",
+    "reactstrap": "^9.2.2",
+    "web-vitals": "^2.1.4",
+    "yarn": "^1.22.22"
+  },
+  "scripts": {
+    "start": "react-scripts start ",
+    "start-frontend": "react-scripts start",
+    "start-backend": "cd ../backend && source _venv/bin/activate && flask run",
+    "build": "react-scripts build",
+    "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!my-library-dir)/' -reporters=default --reporters=jest-junit",
+    "test-verbose": "react-scripts test --transformIgnorePatterns 'node_modules/(?!my-library-dir)/'",
+    "test:ci": "CI=true react-scripts test --transformIgnorePatterns 'node_modules/(?!my-library-dir)/' --watchAll=false --reporters=jest-junit",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.24.3",
+    "@babel/preset-react": "^7.24.1",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.2",
+    "aphrodite": "^2.4.0",
+    "autoprefixer": "^10.4.18",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.0.0",
+    "jest-junit": "^16.0.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "ts-jest": "^29.1.2"
+  },
+  "jest": {
+    "resetMocks": false
+  }
+}

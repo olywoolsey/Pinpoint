@@ -1,0 +1,81 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+       - Sprint3
+       - main
+  push:
+    branches:
+      - Testing/140/DockerizeBackFrontend
+      - Sprint3
+      - main
+  schedule:
+    - cron: "0 9 * * *"
+
+jobs:
+  build_test_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check Out Repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.8"
+
+      - name: Build the backend Docker image with no cache
+        run: docker-compose build --no-cache backend
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v1.13.0
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+
+      - name: Push Docker images
+        run: docker-compose push
+
+      - name: Start the backend service
+        run: docker-compose up -d backend
+
+      - name: Run Backend Tests, Capture and Display Results
+        run: docker-compose exec -T backend pytest -c pytest.ci.ini tests/ 2>&1 | tee backend_test_results.xml
+
+      - name: Upload Backend Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: backend-unittest-results
+          path: backend_test_results.xml
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install frontend dependencies
+        run: |
+          cd frontend/
+          npm install
+
+      - name: Run Frontend Tests
+        run: |
+          cd frontend/
+          npm run test:ci
+      
+      - name: Display Frontend Test Results
+        run: |
+          cd frontend/
+          cat junit.xml
+          mv junit.xml ../frontend_test_results.xml
+          
+      - name: Upload Frontend Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: frontend-unittest-results
+          path: frontend_test_results.xml
+
+      - name: Cleanup
+        run: docker-compose down --volumes
